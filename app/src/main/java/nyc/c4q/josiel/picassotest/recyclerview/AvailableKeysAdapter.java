@@ -1,11 +1,12 @@
 package nyc.c4q.josiel.picassotest.recyclerview;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import java.util.List;
-
+import nyc.c4q.josiel.picassotest.KeyPicFragment;
 import nyc.c4q.josiel.picassotest.backend.AvailableKey;
 
 public class AvailableKeysAdapter extends RecyclerView.Adapter<AvailableKeysViewHolder> {
@@ -33,4 +34,6 @@ public class AvailableKeysAdapter extends RecyclerView.Adapter<AvailableKeysView
     public int getItemCount() {
         return availableKeyList.size();
     }
+
+
 }

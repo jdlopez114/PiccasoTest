@@ -34,7 +34,7 @@ public class AvailableKeysFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_avalablekeys, container, false);
+        View root = inflater.inflate(R.layout.fragment_availablekeys, container, false);
         recyclerView = (RecyclerView) root.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         frag_keys = root.findViewById(R.id.fragment_keys);
