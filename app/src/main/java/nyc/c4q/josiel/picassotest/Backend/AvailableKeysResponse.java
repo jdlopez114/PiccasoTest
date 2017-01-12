@@ -1,16 +1,18 @@
 package nyc.c4q.josiel.picassotest.Backend;
 
+import java.util.List;
+
 public class AvailableKeysResponse {
 
-    private AvailableKeys[] availableKeys;
+    private List<AvailableKeys> availableKeys;
 
     private String success;
 
-    public AvailableKeys[] getAvailableKeys() {
+    public List<AvailableKeys> getAvailableKeys() {
         return availableKeys;
     }
 
-    public void setAvailableKeys(AvailableKeys[] availableKeys) {
+    public void setAvailableKeys(List<AvailableKeys> availableKeys) {
         this.availableKeys = availableKeys;
     }
 
