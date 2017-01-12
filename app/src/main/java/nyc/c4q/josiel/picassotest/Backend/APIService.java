@@ -1,11 +1,7 @@
-package nyc.c4q.josiel.picassotest.Backend;
+package nyc.c4q.josiel.picassotest.backend;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-
-/**
- * Created by Josiel on 1/11/17.
- */
 
 public interface APIService {
 

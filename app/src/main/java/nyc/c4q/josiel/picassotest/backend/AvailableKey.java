@@ -1,10 +1,9 @@
-package nyc.c4q.josiel.picassotest.Backend;
+package nyc.c4q.josiel.picassotest.backend;
 
-public class AvailableKeys {
+public class AvailableKey {
+
     private String textColor;
-
     private String name;
-
     private String url;
 
     public String getTextColor() {
@@ -31,8 +30,4 @@ public class AvailableKeys {
         this.url = url;
     }
 
-    @Override
-    public String toString() {
-        return "ClassPojo [textColor = " + textColor + ", name = " + name + ", url = " + url + "]";
-    }
 }
