@@ -12,7 +12,14 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import nyc.c4q.josiel.picassotest.Backend.APIService;
 import nyc.c4q.josiel.picassotest.Backend.AvailableKeys;
+import nyc.c4q.josiel.picassotest.Backend.AvailableKeysResponse;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class AvailableKeysFragment extends Fragment {
@@ -37,7 +44,27 @@ public class AvailableKeysFragment extends Fragment {
     }
 
     private void fetchAvialableKeys() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://jsjrobotics.nyc/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
+        APIService service = retrofit.create(APIService.class);
+
+        Call<AvailableKeysResponse> call = service.getAvailableKeys();
+        call.enqueue(new Callback<AvailableKeysResponse>() {
+            @Override
+            public void onResponse(Call<AvailableKeysResponse> call, Response<AvailableKeysResponse> response) {
+                AvailableKeysResponse rr = response.body();
+                availableKeysList = rr. getAvailableKeys();
+
+            }
+
+            @Override
+            public void onFailure(Call<AvailableKeysResponse> call, Throwable t) {
+
+            }
+        });
     }
 
 
